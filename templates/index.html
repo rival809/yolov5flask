@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YOLO-Object Detection</title>
+    <link rel="stylesheet" type="text/css" href="../static/index.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="/static/index.js"></script>
+  </head>
+  <body>
+    <div>
+
+      <div class="App">
+      <header class="App-header">
+        <p><u> Deteksi Kendaraan - YOLOv5 </u></p>
+        <!-- <video width="320" height="240" controls>
+          <source src="/static/video_1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video> -->
+        <hr class="line"><hr>
+        <h5> Unggah File yang Ingin Dideteksi </h5>
+        <form>
+          <input
+            id="imageinput"
+            type="file"
+            name="image"
+            onchange="readUrl(this)"
+          />
+        </form>
+        <button name="send"  class="btn btn-lg btn-bloc" id="sendbutton">Deteksi</button>
+        <br/>
+        <div id="link">
+          <a href="" id="download" download>Download Hasil Deteksi</a>
+        </div>
+        <button name="cam" class="button btn-lg btn-bloc" id="opencam">Coba menggunakan kamera</button>
+        <br/>
+        <!-- <div className="pre_img">
+          <span><img id="imagebox" src="" width="320" height="240"/></span>
+        </div> -->
+
+      </header>
+    </div>
+  </div>
+  </body>
+</html>
