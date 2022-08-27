@@ -35,7 +35,7 @@ def detect():
 @app.route("/opencam", methods=['GET'])
 def opencam():
     print("here")
-    subprocess.run(['python', 'detect.py', '--weights',os.path.join(model_dir, "best.pt") , '--source', '0'])
+    subprocess.run(['python', 'detect.py', '--weights',os.path.join(model_dir, "yolov5s.pt") , '--source', '0'])
     return "done"
 
 @app.route('/return-files', methods=['GET'])

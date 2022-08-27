@@ -3,6 +3,18 @@ window.onload = () => {
     imagebox = $("#imagebox");
     link = $("#link");
     input = $("#imageinput")[0];
+    element = document.getElementById("myprogressBar");   
+    width = 1;
+    identity = setInterval(scene, 90);
+      function scene() {
+        if (width >= 90) {
+          clearInterval(identity);
+        } else {
+        width++;
+        element.style.width = width + '%';
+        }
+      }
+
     if (input.files && input.files[0]) {
       let formData = new FormData();
       formData.append("video", input.files[0]);
@@ -21,6 +33,10 @@ window.onload = () => {
           console.log(data);
           // bytestring = data["status"];
           // image = bytestring.split("'")[1];
+          //$("#pesan").css("visibility", "visible");
+          width=100;
+          element.style.width = width + '%'; 
+          alert("Deteksi Sukses");
           $("#link").css("visibility", "visible");
           $("#download").attr("href", "/static/" + data);
           console.log(data);
@@ -28,6 +44,7 @@ window.onload = () => {
       });
     }
   });
+
   $("#opencam").click(() => {
     console.log("evoked openCam");
     $.ajax({
@@ -42,6 +59,8 @@ window.onload = () => {
     });
   })
 };
+
+
 
 function readUrl(input) {
   imagebox = $("#imagebox");
@@ -67,3 +86,4 @@ function openCam(e){
   console.log("evoked openCam");
   console.log(e);
 }
+
